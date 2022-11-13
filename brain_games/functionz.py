@@ -23,8 +23,20 @@ def even():
         return question, 'no'
 
 
+def gcd():
+    first_num = randint(1, 100)
+    second_num = randint(1, 100)
+    question = f'{first_num} {second_num}'
+    smaller, bigger = sorted((first_num, second_num))
+    if bigger % smaller == 0:
+        return question, str(smaller)
+    for div in range(smaller // 2, 0, -1):
+        if bigger % div == 0 and smaller % div == 0:
+            return question, str(div)
+
+
 def calc():
-    first_num = randint(0, 10)
+    first_num = randint(0, 100)
     operator = choice('+-*')
     second_num = randint(0, 10)
     question = f'{first_num} {operator} {second_num}'
@@ -33,7 +45,7 @@ def calc():
 
 
 def check_answer(user_name, func_index):
-    functions = (even, calc)
+    functions = (even, calc, gcd)
     for _ in range(3):
         question, correct_answer = functions[func_index]()
         print(f'Question: {question}')
