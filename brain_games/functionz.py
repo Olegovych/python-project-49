@@ -49,7 +49,7 @@ def progression():
     pr_step = randint(1, 10)
     pr_len = randint(5, 10)
     pr_list = list(str(_) for _ in range
-        (pr_start, pr_start + pr_len * pr_step, pr_step))
+                   (pr_start, pr_start + pr_len * pr_step, pr_step))
     question_index = randint(0, pr_len - 1)
     correct_answer = pr_list[question_index]
     pr_list[question_index] = '..'
@@ -57,8 +57,18 @@ def progression():
     return question, correct_answer
 
 
+def prime():
+    prime_list = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37,
+                  41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97]
+    question = randint(0, 100)
+    if question in prime_list:
+        return question, 'yes'
+    else:
+        return question, 'no'
+
+
 def check_answer(user_name, func_index):
-    functions = (even, calc, gcd, progression)
+    functions = (even, calc, gcd, progression, prime)
     for _ in range(3):
         question, correct_answer = functions[func_index]()
         print(f'Question: {question}')
