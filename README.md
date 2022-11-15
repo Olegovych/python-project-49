@@ -2,9 +2,8 @@
 [![Actions Status](https://github.com/Olegovych/python-project-49/workflows/hexlet-check/badge.svg)](https://github.com/Olegovych/python-project-49/actions)
 [![Maintainability](https://api.codeclimate.com/v1/badges/d709af7987a5159e5b10/maintainability)](https://codeclimate.com/github/Olegovych/python-project-49/maintainability)
 ### Description:
-This repository is created by Hexlet student, as a practice project. It can be installed using _ pip install --user_. Python3 and pip are to be installed on system
+This repository is created by Hexlet student, as a practice project. It can be installed using **pip install --user**. Python3 and pip are to be installed on system
 Then, following games will be available at command line:
-* brain-games
 * brain-even
 * brain-calc
 * brain-gcd
