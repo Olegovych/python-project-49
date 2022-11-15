@@ -1,6 +1,8 @@
 import prompt
 from random import randint, choice
 from os import system
+PRIME_LIST = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37,
+              41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97]
 
 
 def welcome_user():
@@ -58,10 +60,8 @@ def progression():
 
 
 def prime():
-    prime_list = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37,
-                  41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97]
     question = randint(0, 100)
-    if question in prime_list:
+    if question in PRIME_LIST:
         return question, 'yes'
     else:
         return question, 'no'
@@ -82,16 +82,3 @@ def check_answer(user_name, func_index):
             break
     else:
         congratulation(user_name)
-
-
-def check(question, correct_answer, user_name):
-    print(f'Question: {question}')
-    answer = prompt.string('Your answer: ')
-    if answer == correct_answer:
-        print('Correct!')
-        return True
-    else:
-        print(f"'{answer}' is wrong answer ;(. ",
-              f"Correct answer was '{correct_answer}'.", sep="")
-        print(f"Let's try again, {user_name}!")
-        return False
