@@ -5,6 +5,24 @@ PRIME_LIST = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37,
               41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97]
 
 
+def check_answer(task, function):
+    user_name = welcome_user()
+    print(task)
+    for _ in range(3):
+        question, correct_answer = function()
+        print(f'Question: {question}')
+        answer = prompt.string('Your answer: ')
+        if answer == correct_answer:
+            print('Correct!')
+        else:
+            print(f"'{answer}' is wrong answer ;(. ",
+                  f"Correct answer was '{correct_answer}'.", sep="")
+            print(f"Let's try again, {user_name}!")
+            break
+    else:
+        congratulation(user_name)
+
+
 def welcome_user():
     system('clear')
     print('Welcome to the Brain Games!')
@@ -65,20 +83,3 @@ def prime():
         return question, 'yes'
     else:
         return question, 'no'
-
-
-def check_answer(user_name, func_index):
-    functions = (even, calc, gcd, progression, prime)
-    for _ in range(3):
-        question, correct_answer = functions[func_index]()
-        print(f'Question: {question}')
-        answer = prompt.string('Your answer: ')
-        if answer == correct_answer:
-            print('Correct!')
-        else:
-            print(f"'{answer}' is wrong answer ;(. ",
-                  f"Correct answer was '{correct_answer}'.", sep="")
-            print(f"Let's try again, {user_name}!")
-            break
-    else:
-        congratulation(user_name)
