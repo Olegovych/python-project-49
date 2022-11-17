@@ -1,12 +1,10 @@
 #!/usr/bin/env python3
-from brain_games.functionz import welcome_user, check_answer
+from brain_games.functionz import check_answer, gcd
 
 
 def main():
-    user_name = welcome_user()
-    print('Find the greatest common divisor of given numbers.')
-    func_index = 2
-    check_answer(user_name, func_index)
+    task = 'Find the greatest common divisor of given numbers.'
+    check_answer(task, gcd)
 
 
 if __name__ == '__main__':
