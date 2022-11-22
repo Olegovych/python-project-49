@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-from brain_games.functionz import check_answer, prime
+from brain_games.functionz import check_answer
+from brain_games.games.game_prime import task, prime
 
 
 def main():
-    task = 'Answer "yes" if given number is prime. Otherwise answer "no".'
     check_answer(task, prime)
 
 
