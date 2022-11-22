@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-from brain_games.functionz import check_answer, progression
+from brain_games.functionz import check_answer
+from brain_games.games.game_progression import task, progression
 
 
 def main():
-    task = 'What number is missing in the progression?'
     check_answer(task, progression)
 
 
