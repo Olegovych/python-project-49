@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-from brain_games.functionz import check_answer, calc
+from brain_games.functionz import check_answer
+from brain_games.games.game_calc import task, calc
 
 
 def main():
-    task = 'What is the result of the expression?'
     check_answer(task, calc)
 
 
