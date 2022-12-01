@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-from brain_games.functionz import check_answer
+from brain_games.engine import check_answer
 from brain_games.games.game_prime import task, prime
 
 
