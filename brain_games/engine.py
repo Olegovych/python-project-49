@@ -2,9 +2,9 @@ import prompt
 from os import system
 
 
-def run_game(TASK, function):
+def run_game(task, function):
     user_name = welcome_user()
-    print(TASK)
+    print(task)
     for _ in range(3):
         question, correct_answer = function()
         print(f'Question: {question}')
