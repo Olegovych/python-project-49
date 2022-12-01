@@ -4,7 +4,7 @@ from random import randint
 TASK = 'What number is missing in the progression?'
 
 
-def progression():
+def get_question_and_answer():
     pr_start = randint(1, 20)
     pr_step = randint(1, 10)
     pr_len = randint(5, 10)
