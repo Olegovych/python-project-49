@@ -2,7 +2,7 @@ import prompt
 from os import system
 
 
-def check_answer(task, function):
+def run_game(task, function):
     user_name = welcome_user()
     print(task)
     for _ in range(3):

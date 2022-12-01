@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
-from brain_games.engine import check_answer
+from brain_games.engine import run_game
 from brain_games.games.game_gcd import task, gcd
 
 
 def main():
-    check_answer(task, gcd)
+    run_game(task, gcd)
 
 
 if __name__ == '__main__':
