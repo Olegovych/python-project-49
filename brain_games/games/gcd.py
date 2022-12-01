@@ -1,7 +1,7 @@
 from random import randint
 
 
-task = 'Find the greatest common divisor of given numbers.'
+TASK = 'Find the greatest common divisor of given numbers.'
 
 
 def gcd():

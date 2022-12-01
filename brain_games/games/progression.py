@@ -1,7 +1,7 @@
 from random import randint
 
 
-task = 'What number is missing in the progression?'
+TASK = 'What number is missing in the progression?'
 
 
 def progression():
