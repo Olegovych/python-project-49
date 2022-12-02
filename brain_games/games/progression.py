@@ -5,13 +5,13 @@ TASK = 'What number is missing in the progression?'
 
 
 def get_question_and_answer():
-    pr_start = randint(1, 20)
-    pr_step = randint(1, 10)
-    pr_len = randint(5, 10)
-    pr_list = list(str(_) for _ in range
-                   (pr_start, pr_start + pr_len * pr_step, pr_step))
-    question_index = randint(0, pr_len - 1)
-    correct_answer = pr_list[question_index]
-    pr_list[question_index] = '..'
-    question = ' '.join(pr_list)
+    start = randint(1, 20)
+    step = randint(1, 10)
+    length = randint(5, 10)
+    end = start + length * step
+    progression = list(range(start, end, step))
+    question_index = randint(0, length - 1)
+    correct_answer = str(progression[question_index])
+    progression[question_index] = '..'
+    question = ' '.join(map(str, progression))
     return question, correct_answer
