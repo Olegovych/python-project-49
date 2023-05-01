@@ -1,12 +1,14 @@
 import prompt
 from os import system
 
+QUESTIONS_COUNT = 3
 
-def run_game(task, function):
+
+def run_game(game):
     user_name = welcome_user()
-    print(task)
-    for _ in range(3):
-        question, correct_answer = function()
+    print(game.TASK)
+    for _ in range(QUESTIONS_COUNT):
+        question, correct_answer = game.get_question_and_answer()
         print(f'Question: {question}')
         answer = prompt.string('Your answer: ')
         if answer == correct_answer:
